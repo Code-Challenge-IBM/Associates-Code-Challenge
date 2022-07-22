@@ -1,5 +1,6 @@
 package com.ibm.associatescodechallenge;
 
+import com.ibm.associatescodechallenge.model.Cliente;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -7,7 +8,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class AssociatesCodeChallengeApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(AssociatesCodeChallengeApplication.class, args);
+//        SpringApplication.run(AssociatesCodeChallengeApplication.class, args);
+
+        Cliente gustavo = new Cliente(1L, "8127389123");
+
     }
 
 }
