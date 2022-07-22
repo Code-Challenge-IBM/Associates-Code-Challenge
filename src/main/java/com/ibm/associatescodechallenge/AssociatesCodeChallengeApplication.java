@@ -10,8 +10,6 @@ public class AssociatesCodeChallengeApplication {
     public static void main(String[] args) {
 //        SpringApplication.run(AssociatesCodeChallengeApplication.class, args);
 
-        Cliente gustavo = new Cliente(1L, "8127389123");
-
     }
 
 }
