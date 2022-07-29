@@ -1,12 +1,24 @@
 package com.ibm.associatescodechallenge.model;
 
 import java.util.Date;
+import java.util.List;
 import java.util.Objects;
 
+/**
+ * Classe de integracao com a tabela tpedido
+ */
 public class Pedido  {
 
     private Long id;
     private Date date;
+
+    private Cliente cliente;
+
+    /**
+     * lista de pedidos para cada cliente
+     */
+    private List<ItemPedido> itensPedido;
+
 
     //falta criar enum de status
 
@@ -33,6 +45,18 @@ public class Pedido  {
 
     public void setDate(Date date) {
         this.date = date;
+    }
+
+    public Cliente getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
+    }
+
+    public List<ItemPedido> getItensPedido() {
+        return itensPedido;
     }
 
     @Override

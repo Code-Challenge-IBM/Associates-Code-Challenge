@@ -2,6 +2,9 @@ package com.ibm.associatescodechallenge.model;
 
 import java.util.Objects;
 
+/**
+ * Classe de integracao com a tabela tproduto
+ */
 public class Produto {
 
     private Long id;

@@ -2,6 +2,10 @@ package com.ibm.associatescodechallenge.model;
 
 import java.util.Objects;
 
+/**
+ * Classe de integracao com o banco de dados com a tabela titemPedido
+ *
+ */
 public class ItemPedido {
 
     private Long id;

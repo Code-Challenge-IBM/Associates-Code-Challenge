@@ -1,5 +1,8 @@
 package com.ibm.associatescodechallenge.model;
 
+/**
+ * Classe de integracao com a tabela tcontato
+ */
 public class Contato {
     private Long id;
     private String nomeComprador;

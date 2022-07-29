@@ -3,6 +3,9 @@ package com.ibm.associatescodechallenge.model;
 
 import java.util.Objects;
 
+/**
+ * Classe de integracao com a tabela tendereco
+ */
 public class Endereco {
     private Long id;
     private String tipoLogradouro;
