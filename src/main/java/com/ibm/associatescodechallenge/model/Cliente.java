@@ -3,6 +3,9 @@ package com.ibm.associatescodechallenge.model;
 import java.util.List;
 import java.util.Objects;
 
+/**
+ * Classe de integracao com a tabela tcliente
+ */
 public class Cliente {
     private Long id;
     private String cnpj;
