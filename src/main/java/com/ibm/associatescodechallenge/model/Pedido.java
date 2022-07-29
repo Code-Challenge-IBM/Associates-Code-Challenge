@@ -79,4 +79,10 @@ public class Pedido  {
                 ", date=" + date +
                 '}';
     }
+    public void AdicionarProduto (ItemPedido itemPedido) {
+        itensPedido.add(itemPedido);
+    }
+    public void RemoverProduto (ItemPedido itemPedido) {
+        itensPedido.remove(itemPedido);
+    }
 }
