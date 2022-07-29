@@ -1,8 +1,6 @@
 package com.ibm.associatescodechallenge.model;
 
-import java.util.Date;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 
 /**
  * Classe de integracao com a tabela tpedido
@@ -17,7 +15,8 @@ public class Pedido  {
     /**
      * lista de pedidos para cada cliente
      */
-    private List<ItemPedido> itensPedido;
+    private List<ItemPedido> itensPedido = new ArrayList<>();
+
 
 
     //falta criar enum de status
@@ -79,10 +78,19 @@ public class Pedido  {
                 ", date=" + date +
                 '}';
     }
-    public void AdicionarProduto (ItemPedido itemPedido) {
+    public void adicionarProduto (ItemPedido itemPedido) {
         itensPedido.add(itemPedido);
     }
-    public void RemoverProduto (ItemPedido itemPedido) {
+    public void removerProduto (ItemPedido itemPedido) {
         itensPedido.remove(itemPedido);
     }
+
+    public Double total(){
+        double total = 0.0;
+        for (ItemPedido item : itensPedido){
+            total += item.getPreco();
+        }
+        return total;
+    }
+
 }
