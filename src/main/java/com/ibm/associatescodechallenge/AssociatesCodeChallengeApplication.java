@@ -9,7 +9,6 @@ public class AssociatesCodeChallengeApplication {
 
     public static void main(String[] args) {
 //        SpringApplication.run(AssociatesCodeChallengeApplication.class, args);
-
     }
 
 }
