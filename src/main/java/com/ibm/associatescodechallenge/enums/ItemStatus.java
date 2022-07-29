@@ -1,7 +1,7 @@
 package com.ibm.associatescodechallenge.enums;
 
 /*
- *
+ * Lista de status de pedido
 */
 
 public enum ItemStatus {
