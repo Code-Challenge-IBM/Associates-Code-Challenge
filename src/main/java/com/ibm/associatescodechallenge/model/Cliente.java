@@ -5,6 +5,7 @@ import java.util.Objects;
 
 /**
  * Classe de integracao com a tabela tcliente
+ *
  */
 public class Cliente {
     private Long id;
