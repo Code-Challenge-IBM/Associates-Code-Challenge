@@ -9,7 +9,7 @@ import java.util.Objects;
  */
 
 @Entity
-@Table(name = "tb_endereco")
+//@Table
 public class Endereco {
 
     @Id
@@ -25,7 +25,7 @@ public class Endereco {
     private String cep;
     private String pais;
 
-    @ManyToOne
+    //
     public Cliente cliente;
 
     public Endereco() {}

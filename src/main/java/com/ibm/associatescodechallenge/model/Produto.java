@@ -9,7 +9,7 @@ import java.util.Objects;
  * Classe de integracao com a tabela tproduto
  */
 @Entity
-@Table(name = "tb_produto")
+//@Table
 public class Produto {
 
     @Id
@@ -19,10 +19,6 @@ public class Produto {
     private String marca;
     private Double preco;
 
-    @JsonIgnoreProperties
-    @ManyToOne
-    @JoinColumn(name = "cliente.id")
-    public Cliente cliente;
 
     public Produto(){}
 

@@ -6,7 +6,7 @@ import javax.persistence.*;
  * Classe de integracao com a tabela tcontato
  */
 @Entity
-@Table(name = "tb_contato")
+//@Table
 public class Contato {
 
     @Id
@@ -18,8 +18,8 @@ public class Contato {
     private Integer DDI;
     private Integer DDD;
 
-    @ManyToOne
-    public Cliente cliente;
+   // @ManyToOne
+    //public Cliente cliente;
 
     public Contato() {}
     public Contato(Long id, String nomeComprador, String email, String telefone, Integer DDI, Integer DDD) {

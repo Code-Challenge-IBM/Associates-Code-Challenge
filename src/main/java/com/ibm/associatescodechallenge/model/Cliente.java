@@ -11,7 +11,7 @@ import java.util.Objects;
  */
 
 @Entity
-@Table(name = "tb_cliente")
+//@Table
 public class Cliente {
 
     @Id
@@ -20,13 +20,13 @@ public class Cliente {
     private String cnpj;
     private String razaoSocial;
 
-    @JsonIgnoreProperties
-    @OneToMany(mappedBy = "cliente")
+  //  @JsonIgnoreProperties
+//    @OneToMany(mappedBy = "cliente")
     private List<Endereco> enderecos;
 
-    @JsonIgnoreProperties
-    @OneToMany(mappedBy = "cliente")
-    private List<Contato> contatos;
+    //@JsonIgnoreProperties
+    //@OneToMany(mappedBy = "cliente")
+    //private List<Contato> contatos;
 
     public Cliente() {
     }
@@ -36,7 +36,7 @@ public class Cliente {
         this.cnpj = cnpj;
         this.razaoSocial = razaoSocial;
         this.enderecos = enderecos;
-        this.contatos = contatos;
+        //this.contatos = contatos;
     }
 
     public Long getId() {
@@ -67,9 +67,9 @@ public class Cliente {
         return enderecos;
     }
 
-    public List<Contato> getContatos() {
+    /*public List<Contato> getContatos() {
         return contatos;
-    }
+    }*/
 
     @Override
     public boolean equals(Object o) {

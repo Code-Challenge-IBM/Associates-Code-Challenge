@@ -9,7 +9,7 @@ import java.util.*;
  * Classe de integracao com a tabela tpedido
  */
 @Entity
-@Table(name = "tb_pedido")
+//@Table
 public class Pedido  {
 
     @Id
@@ -22,6 +22,7 @@ public class Pedido  {
     /**
      * lista de pedidos para cada cliente
      */
+    //@OneToMany(mappedBy = "ItemPedido")
     private List<ItemPedido> itensPedido = new ArrayList<>();
 
     private ItemStatus itemStatus;

@@ -7,16 +7,22 @@ import java.util.Objects;
  * Classe de integracao com o banco de dados com a tabela titemPedido
  *
  */
-@Entity
-@Table(name= "tb_itemPedido")
+//@Entity
+//@Table
 public class ItemPedido {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @OneToOne
+    @JoinColumn(name = "id")
     private Produto produto;
     private Integer quantidade;
     private Double preco; //Alterar essa atributo para a classe produto.
+
+    //@ManyToOne Verificar as relacoes das tabelas
+    //public Pedido pedido;
 
     public ItemPedido(){}
     public ItemPedido(Long id, Integer quantidade, Double preco) {
@@ -80,7 +86,7 @@ public class ItemPedido {
     }
 
     public Double subTotal() {
-        Double subTotal = this.quantidade * this.preco;
-        return subTotal;
+        return this.quantidade * this.preco;
+
     }
 }
