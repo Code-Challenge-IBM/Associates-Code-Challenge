@@ -1,12 +1,19 @@
 package com.ibm.associatescodechallenge.model;
 
+import com.ibm.associatescodechallenge.enums.ItemStatus;
+
+import javax.persistence.*;
 import java.util.*;
 
 /**
  * Classe de integracao com a tabela tpedido
  */
+@Entity
+@Table(name = "tb_pedido")
 public class Pedido  {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private Date date;
 
@@ -17,7 +24,7 @@ public class Pedido  {
      */
     private List<ItemPedido> itensPedido = new ArrayList<>();
 
-
+    private ItemStatus itemStatus;
 
     //falta criar enum de status
 
@@ -52,6 +59,14 @@ public class Pedido  {
 
     public void setCliente(Cliente cliente) {
         this.cliente = cliente;
+    }
+
+    public ItemStatus getItemStatus() {
+        return itemStatus;
+    }
+
+    public void setItemStatus(ItemStatus itemStatus) {
+        this.itemStatus = itemStatus;
     }
 
     public List<ItemPedido> getItensPedido() {

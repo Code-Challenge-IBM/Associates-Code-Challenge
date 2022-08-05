@@ -1,12 +1,19 @@
 package com.ibm.associatescodechallenge.model;
 
 
+import javax.persistence.*;
 import java.util.Objects;
 
 /**
  * Classe de integracao com a tabela tendereco
  */
+
+@Entity
+@Table(name = "tb_endereco")
 public class Endereco {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String tipoLogradouro;
     private String logradouro;
@@ -17,6 +24,9 @@ public class Endereco {
     private String estado;
     private String cep;
     private String pais;
+
+    @ManyToOne
+    public Cliente cliente;
 
     public Endereco() {}
     public Endereco(Long id, String tipoLogradouro, String logradouro, Integer numero, String complemento, String bairro, String cidade, String estado, String cep, String pais) {

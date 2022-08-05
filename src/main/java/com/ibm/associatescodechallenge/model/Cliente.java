@@ -1,16 +1,31 @@
 package com.ibm.associatescodechallenge.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+import javax.persistence.*;
 import java.util.List;
 import java.util.Objects;
 
 /**
  * Classe de integracao com a tabela tcliente
  */
+
+@Entity
+@Table(name = "tb_cliente")
 public class Cliente {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String cnpj;
     private String razaoSocial;
+
+    @JsonIgnoreProperties
+    @OneToMany(mappedBy = "cliente")
     private List<Endereco> enderecos;
+
+    @JsonIgnoreProperties
+    @OneToMany(mappedBy = "cliente")
     private List<Contato> contatos;
 
     public Cliente() {

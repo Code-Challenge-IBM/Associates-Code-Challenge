@@ -1,13 +1,18 @@
 package com.ibm.associatescodechallenge.model;
 
+import javax.persistence.*;
 import java.util.Objects;
 
 /**
  * Classe de integracao com o banco de dados com a tabela titemPedido
  *
  */
+@Entity
+@Table(name= "tb_itemPedido")
 public class ItemPedido {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private Produto produto;
     private Integer quantidade;

@@ -1,15 +1,25 @@
 package com.ibm.associatescodechallenge.model;
 
+import javax.persistence.*;
+
 /**
  * Classe de integracao com a tabela tcontato
  */
+@Entity
+@Table(name = "tb_contato")
 public class Contato {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nomeComprador;
     private String email;
     private String telefone;
     private Integer DDI;
     private Integer DDD;
+
+    @ManyToOne
+    public Cliente cliente;
 
     public Contato() {}
     public Contato(Long id, String nomeComprador, String email, String telefone, Integer DDI, Integer DDD) {

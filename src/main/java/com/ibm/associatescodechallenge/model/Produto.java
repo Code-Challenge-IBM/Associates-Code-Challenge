@@ -1,16 +1,28 @@
 package com.ibm.associatescodechallenge.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+import javax.persistence.*;
 import java.util.Objects;
 
 /**
  * Classe de integracao com a tabela tproduto
  */
+@Entity
+@Table(name = "tb_produto")
 public class Produto {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
     private String marca;
     private Double preco;
+
+    @JsonIgnoreProperties
+    @ManyToOne
+    @JoinColumn(name = "cliente.id")
+    public Cliente cliente;
 
     public Produto(){}
 
