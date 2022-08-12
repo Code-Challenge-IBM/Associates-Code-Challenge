@@ -9,7 +9,6 @@ import java.util.Objects;
 public class ItemPedido {
 
     private Long id;
-    private Produto produto;
     private Integer quantidade;
     private Double preco; //Alterar essa atributo para a classe produto.
 
@@ -28,13 +27,6 @@ public class ItemPedido {
         this.id = id;
     }
 
-    public Produto getProduto() {
-        return produto;
-    }
-
-    public void setProduto(Produto produto) {
-        this.produto = produto;
-    }
 
     public Integer getQuantidade() {
         return quantidade;
@@ -74,8 +66,4 @@ public class ItemPedido {
                 '}';
     }
 
-    public Double subTotal() {
-        Double subTotal = this.quantidade * this.preco;
-        return subTotal;
-    }
 }
