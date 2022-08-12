@@ -8,7 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class AssociatesCodeChallengeApplication {
 
     public static void main(String[] args) {
-//        SpringApplication.run(AssociatesCodeChallengeApplication.class, args);
+    SpringApplication.run(AssociatesCodeChallengeApplication.class, args);
     }
 
 }
