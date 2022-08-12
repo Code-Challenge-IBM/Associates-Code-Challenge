@@ -9,13 +9,11 @@ public class Pedido  {
 
     private Long id;
     private Date date;
-
     private Cliente cliente;
 
     /**
      * lista de pedidos para cada cliente
      */
-    private List<ItemPedido> itensPedido = new ArrayList<>();
 
 
 
@@ -54,9 +52,6 @@ public class Pedido  {
         this.cliente = cliente;
     }
 
-    public List<ItemPedido> getItensPedido() {
-        return itensPedido;
-    }
 
     @Override
     public boolean equals(Object o) {
@@ -78,19 +73,6 @@ public class Pedido  {
                 ", date=" + date +
                 '}';
     }
-    public void adicionarProduto (ItemPedido itemPedido) {
-        itensPedido.add(itemPedido);
-    }
-    public void removerProduto (ItemPedido itemPedido) {
-        itensPedido.remove(itemPedido);
-    }
 
-    public Double total(){
-        double total = 0.0;
-        for (ItemPedido item : itensPedido){
-            total += item.getPreco();
-        }
-        return total;
-    }
 
 }
